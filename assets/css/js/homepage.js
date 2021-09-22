@@ -22,14 +22,14 @@ var getUserRepos = function (user) {
         .catch(function (error) {
             alert("Unable to connect to Github");
         });
-    
+}
     
     var formSubmitHandler = function (event) {
         event.preventDefault()
         console.log(event)
        
+       
         var username = nameInputEl.value.trim()
-
         if (username) {
             getUserRepos(username)
             nameInputEl.value = ""
@@ -38,7 +38,9 @@ var getUserRepos = function (user) {
         }
     }
 
-    userFormEl.addEventListener('submit', formSubmitHandler)
+
+userFormEl.addEventListener('submit', formSubmitHandler)
+
 
     var displayRepos = function (repos, searchTerm) {
         if (repos.length === 0) {
@@ -79,4 +81,4 @@ var getUserRepos = function (user) {
         }
     
     }
-}
+
