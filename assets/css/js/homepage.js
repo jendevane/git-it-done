@@ -27,7 +27,7 @@ var getUserRepos = function (user) {
     var formSubmitHandler = function (event) {
         event.preventDefault()
         console.log(event)
-        userFormEl.addEventListener('submit', formSubmitHandler)
+       
         var username = nameInputEl.value.trim()
 
         if (username) {
@@ -38,7 +38,7 @@ var getUserRepos = function (user) {
         }
     }
 
-
+    userFormEl.addEventListener('submit', formSubmitHandler)
 
     var displayRepos = function (repos, searchTerm) {
         if (repos.length === 0) {
